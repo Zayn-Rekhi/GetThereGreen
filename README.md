@@ -1,3 +1,5 @@
+![Get There Green Logo](ReadMedia/masterlogo.png?raw=true 'Get There Green')
+
 # GetThereGreen - Our Solution to Air Pollution
 
 GetThereGreen is an interactive simulation where users can see how their commute to work affects the quality of the air around them.
