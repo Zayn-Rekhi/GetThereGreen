@@ -1,9 +1,17 @@
 # GetThereGreen - Our Solution to Air Pollution
 
-GetThereGreen is an interactive simulation where users can see the effects of society's commute to work on the quality of our air for the new 10 years.
+GetThereGreen is an interactive simulation where users can see how their commute to work affects the quality of the air around them.
+
+https://gettheregreen.ml
+
+## Architecture
+
+![Diagram of Get There Green architecture](ReadMedia/Architecture.png?raw=true 'Get There Green Architecture')
+
+The API is hosted on a Raspberry Pi. This runs NGINX, Django, and TensorFlow in order to return predictions back to the frontend. The frontend is made in React/Typescript and hosted on Firebase
 
 ## Machine Learning
 
-We used Tensorflow/Keras in order to create 4 highly accurate model (Multi-Layer Perceptron) that predicts the concentration of Sulfur Dioxide, Nitrogen Dioxide, 
-Carbon Monoxide, and Surface Level Ozone. The input data that wes used was acquired from the US Census data database under the specific header of ***B08301***. The
-air quality data was acquired from the EPA (United States Environmental Protection Agency) and is used as the labels for our training data.  
+We used Tensorflow/Keras in order to create 4 highly accurate model (Multi-Layer Perceptron) that predicts the concentration of Sulfur Dioxide, Nitrogen Dioxide,
+Carbon Monoxide, and Surface Level Ozone. The input data that wes used was acquired from the US Census data database under the specific header of **_B08301_**. The
+air quality data was acquired from the EPA (United States Environmental Protection Agency) and is used as the labels for our training data.
