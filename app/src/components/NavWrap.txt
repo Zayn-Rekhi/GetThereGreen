@@ -1,0 +1,18 @@
+// import React from 'react';
+// import { useHistory } from 'react-router';
+// interface NavWrapProps {
+// 	to: string;
+// 	children: any;
+// 	style?: any;
+// }
+// export default function NavWrap(props: NavWrapProps) {
+// 	const history = useHistory();
+// 	const handleClick = () => {
+// 		history.push(props.to);
+// 	};
+// 	return (
+// 		<div style={props.style} onClick={handleClick}>
+// 			{props.children}
+// 		</div>
+// 	);
+// }

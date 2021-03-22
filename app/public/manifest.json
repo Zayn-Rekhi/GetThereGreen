@@ -1,0 +1,8 @@
+{
+	"short_name": "Get There Green",
+	"name": "Get There Green",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}
