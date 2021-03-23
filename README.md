@@ -23,4 +23,22 @@ air quality data was acquired from the EPA (United States Environmental Protecti
 ### Website Code
 
 The React code is stored in the `app/` directory. You will find the components and such in `app/src`, while metadata and other information is stored in `public/src`
+
+## How to Navigate The Repository
+
+###API
+
+The API folder is an API (Application Programming Interface) was created using the [DJANGO](https://www.djangoproject.com/) Web Framework. Machine Learning models are stored in the `api/models` folder where all the models have been zipped in order to save data for the repository. Most of the backend code that is used to process the incoming `POST` request is written in the `api/prediction/views.py` file. In order to run the following api, do the following:
+``` 
+1. Install Dependencies:
+  pip3 install -r requirements.txt
+2. Make Migrations: 
+  python3 manage.py makemigrations
+  python3 manage.py migrate
+```
+###NETWORK
+
+In the Network folder, the models were trained and the data was cleaned. Firstly, the `census.py` file located in `network` is used in order to clean the data that is used to be fed into the Machine Learning algorithm. The `main.py` file is the testing file in whcih the models were created and functions that are used to format the predictions of the neural network were made. 
+
 https://gettheregreen.ml/
+
