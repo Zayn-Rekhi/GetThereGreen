@@ -1,8 +1,5 @@
-from sklearn import svm
 from termcolor import colored
-from datetime import datetime
 import pandas as pd
-import numpy as np
 import math
 
 _PARAMETER_NAME = ["Ozone", "Sulfur dioxide", "Nitrogen dioxide (NO2)", "Carbon monoxide"]
@@ -16,22 +13,22 @@ _STATE_NAMES = ["Alaska", "Alabama", "Arkansas", "American Samoa", "Arizona", "C
                 "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas",
                 "Utah", "Virginia", "Virgin Islands", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"]
 
-_CENSUS_PATHS = ["../datasets/commute/census_data_2010.csv", "../datasets/commute/census_data_2011.csv",
-                 "../datasets/commute/census_data_2012.csv", "../datasets/commute/census_data_2013.csv",
-                 "../datasets/commute/census_data_2014.csv", "../datasets/commute/census_data_2015.csv",
-                 "../datasets/commute/census_data_2016.csv", "../datasets/commute/census_data_2017.csv",
-                 "../datasets/commute/census_data_2018.csv", "../datasets/commute/census_data_2019.csv"]
+_CENSUS_PATHS = ["datasets/commute/census_data_2010.csv", "datasets/commute/census_data_2011.csv",
+                 "datasets/commute/census_data_2012.csv", "datasets/commute/census_data_2013.csv",
+                 "datasets/commute/census_data_2014.csv", "datasets/commute/census_data_2015.csv",
+                 "datasets/commute/census_data_2016.csv", "datasets/commute/census_data_2017.csv",
+                 "datasets/commute/census_data_2018.csv", "datasets/commute/census_data_2019.csv"]
 
-_AIR_PATHS = ["../datasets/air_quality/annual_conc_by_monitor_2010.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2011.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2012.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2013.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2014.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2015.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2016.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2017.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2018.csv",
-              "../datasets/air_quality/annual_conc_by_monitor_2019.csv"]
+_AIR_PATHS = ["datasets/air_quality/annual_conc_by_monitor_2010.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2011.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2012.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2013.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2014.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2015.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2016.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2017.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2018.csv",
+              "datasets/air_quality/annual_conc_by_monitor_2019.csv"]
 
 def percentage(val, total):
     return int(val/total*100)
@@ -173,4 +170,4 @@ if __name__ == "__main__":
                          "Y_train_2":Y_train_2,
                          "Y_train_3":Y_train_3})
 
-    data.to_csv("../out/training_data.csv")
+    data.to_csv("out/training_data.csv")
