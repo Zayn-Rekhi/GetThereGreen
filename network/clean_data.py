@@ -118,7 +118,7 @@ def create_scale(train_data):
     try:
         return list(range(min_val, max_val + step, step))
     except ValueError:
-        [0] * len(train_data)
+        return [0] * len(train_data)
 
 
 def scale_data(train_data, scale):
